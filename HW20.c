@@ -1,5 +1,6 @@
 // Kiem tra so nguyen to
 #include<stdio.h>
+#include<math.h>
 int main(){
 	int a;
 	printf("Nhap so N: ", a);
