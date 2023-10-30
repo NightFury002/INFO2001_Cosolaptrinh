@@ -1,40 +1,20 @@
-#include<stdio.h>
-int main(){
-	int t,n;
-	printf("Thang, Nam:", t, n);
-	scanf("%d %d", &t, &n);
-	int a(int t, int n){
-	if(t,n <=0 ||t<1 & t>12){
-		printf("INVALID");
-	} else{
-		printf("%d\n", a);
+#include <stdio.h>
+
+int main () {
+	int t, n;
+	printf ("Nhap so thang va nam (-10^6 <= t, n <= 10^6):");
+	scanf ("%d %d", &t, &n);
+	
+	if (t < 1 || t > 12 & n < 0) {
+		printf ("INVALID");
+	} else if (t == 1 || t == 3 || t == 5 || t == 7 || t == 8 || t == 10 || t == 12) {
+		printf ("31");
+	} else if (n % 400 == 0 || n % 4 == 0 &n % 100 != 0 & t == 2) {
+		printf ("29");
+	} else if (t == 2) {
+		printf ("28");
+	} else if (t == 4 || t == 6 || t == 9 || t == 11) {
+		printf ("30");
 	}
-	switch (a){
-		case 1:
-		case 3:
-		case 5:
-		case 7:
-		case 8:
-		case 10:
-		case 12:
-			a=31;
-			break;
-		case 4:
-		case 6:
-		case 9:
-		case 11:
-			a=30;
-			break;
-		case 2:
-			if(n % 400 == 0 || n % 4 == 0 & n % 100 != 0){
-				a=29;
-			} else{
-				a=28;
-			}
-			break;
-		default:
-			a= -1;
-			break;
-		}
 	return 0;
 }
