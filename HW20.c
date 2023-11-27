@@ -1,5 +1,7 @@
 // Kiem tra so nguyen to
 #include<stdio.h>
+#include<math.h>
+
 int main(){
 	int a;
 	printf("Nhap so N: ", a);
@@ -9,7 +11,10 @@ int main(){
 		return 0;
 	}
 	int b;
-	for (b = 2; b <= sqrt(a); b++){
+	for (b = 2; b <= a/2; b++){
+		
+		
+		
 		if(a % b == 0){
 			printf("N khong phai la so nguyen to");
 			return 0;
